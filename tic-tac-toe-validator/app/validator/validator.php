@@ -1,6 +1,6 @@
 <?php
 
-class Validator
+class validator
 {
     private const PLAYER_X = 'x';
     private const PLAYER_O = 'o';
@@ -128,7 +128,7 @@ for ($i = 0; $i < $N; $i++) {
 }
 
 foreach ($testGrids as $grid) {
-    $validator = new Validator();
+    $validator = new validator();
     echo $validator->getValidatorAnswer($grid) . PHP_EOL;
 }
 

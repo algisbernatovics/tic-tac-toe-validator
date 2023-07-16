@@ -1,10 +1,9 @@
 <?php
-
-require '../validator/Validator.php';
+require __DIR__ . '/../validator/validator.php';
 
 use PHPUnit\Framework\TestCase;
 
-class ValidatorTest extends TestCase
+class validatorTest extends TestCase
 {
     public function testEmpty()
     {
@@ -224,7 +223,7 @@ class ValidatorTest extends TestCase
     }
     public function testTie2()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'x', 'o',
             'x', 'o', 'x',
@@ -235,7 +234,7 @@ class ValidatorTest extends TestCase
     }
     public function testInvalidGrid1()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'o', 'x',
             'o', 'x', 'x', 'o',
@@ -247,7 +246,7 @@ class ValidatorTest extends TestCase
     }
     public function testInvalidGrid2()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'o', 'o', 'o',
             'x', 'x', 'x', 'o',
@@ -259,7 +258,7 @@ class ValidatorTest extends TestCase
     }
     public function testInvalidGrid3()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             '.', '.', '.', '.',
             '.', '.', '.', '.',
@@ -271,7 +270,7 @@ class ValidatorTest extends TestCase
     }
     public function testInvalidGrid4()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'o', 'o', 'o',
             'o', 'o', 'o', 'o',
@@ -283,7 +282,7 @@ class ValidatorTest extends TestCase
     }
     public function testInvalidGrid5()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x', 'x', 'x',
             'x', 'x', 'x', 'x',
@@ -295,7 +294,7 @@ class ValidatorTest extends TestCase
     }
     public function testUnconventionalWin()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', '.', 'o',
             'x', 'o', 'x',
@@ -306,7 +305,7 @@ class ValidatorTest extends TestCase
     }
     public function testInvalidGridWin()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', '.', 'x', '.',
             'x', 'o', 'o', 'x',
@@ -318,7 +317,7 @@ class ValidatorTest extends TestCase
     }
     public function testIncompleteGrid1()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', '.',
             '.', 'o', '.',
@@ -329,7 +328,7 @@ class ValidatorTest extends TestCase
     }
     public function testIncompleteGrid2()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'x',
             '.', 'o', '.',
@@ -340,7 +339,7 @@ class ValidatorTest extends TestCase
     }
     public function testMixedSymbols1()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'o',
             'o', 'x', 'x',
@@ -351,7 +350,7 @@ class ValidatorTest extends TestCase
     }
     public function testMixedSymbols2()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x', 'o',
             'o', 'o', 'x',
@@ -362,7 +361,7 @@ class ValidatorTest extends TestCase
     }
     public function testLargeGrid()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'x', 'o', 'x',
             'o', 'x', 'o', 'x', 'o',
@@ -375,7 +374,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice1()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'x',
             'o', 'x', 'o',
@@ -386,7 +385,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice2()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x', 'x',
             'o', 'o', 'x',
@@ -397,7 +396,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice3()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'o', 'x',
             'o', 'o', 'x',
@@ -408,7 +407,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice4()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'o',
             'x', 'o', 'o',
@@ -419,7 +418,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice5()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x', 'x',
             'x', 'o', 'o',
@@ -430,7 +429,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice6()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'x', 'o',
             'x', 'x', 'x',
@@ -441,7 +440,7 @@ class ValidatorTest extends TestCase
     }
     public function smallBoard()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x',
             'x', 'x',
@@ -452,7 +451,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice7()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'o', 'x',
             'o', 'x', 'x',
@@ -463,7 +462,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice8()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'x',
             'o', 'x', 'x',
@@ -474,7 +473,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice9()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'o',
             'x', 'x', 'o',
@@ -485,7 +484,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice10()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'x',
             'x', 'x', 'o',
@@ -496,7 +495,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice11()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'o', 'o', 'x',
             'o', 'x', 'o',
@@ -507,7 +506,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice12()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'o', 'o',
             'o', 'x', 'o',
@@ -518,7 +517,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice13()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x', 'x',
             'o', 'x', 'o',
@@ -529,7 +528,7 @@ class ValidatorTest extends TestCase
     }
     public function testXWinTwice14()
     {
-        $validator = new Validator();
+        $validator = new validator();
         $board = [
             'x', 'x', 'x',
             'o', 'x', 'o',

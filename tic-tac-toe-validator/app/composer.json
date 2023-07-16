@@ -1,8 +1,0 @@
-{
-    "name": "algis.bernatovics/tic-tac-toe-validator",
-    "description": "game-test",
-    "require": {
-        "phpunit/phpunit": "^9.5",
-      "ext-readline": "*"
-    }
-}
