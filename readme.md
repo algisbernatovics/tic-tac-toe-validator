@@ -1,4 +1,10 @@
-# Tic-Tac-Toe Validator
+## To launch unit tests.
+
+- composer install
+- vendor/bin/phpunit tests/validatorTest.php
+- enter
+
+## Tic-Tac-Toe Validator
 
 This is a PHP class that validates Tic-Tac-Toe game grids. It checks if the given grid represents a valid game state based on specific conditions.
 
@@ -25,3 +31,5 @@ $grid = [
 ];
 $result = $validator->getValidatorAnswer($grid);
 echo $result; // Outputs: 'yes' or 'no'
+
+
