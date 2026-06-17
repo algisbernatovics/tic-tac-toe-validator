@@ -2,15 +2,33 @@
 
 A PHP validator that checks whether Tic Tac Toe board states can appear in a valid game sequence.
 
-## Overview
+## Learning Goal
 
-A PHP validator that checks whether Tic Tac Toe board states can appear in a valid game sequence.
+Practice domain-rule validation, turn-order checks, win-line detection, and automated tests around tricky board states.
 
 ## Features
 
 - Reads one or more 3x3 boards from standard input.
-- Checks turn order and winning-line constraints.
-- Includes PHPUnit coverage for validation scenarios.
+- Checks player counts, turn simulation, and winning-line constraints.
+- Includes PHPUnit tests for validation scenarios.
+
+## Complexity
+
+- Time: `O(1)` per board because the board is always 3x3.
+- Space: `O(1)` per board.
+
+## Example
+
+```text
+Input
+1
+xox
+o.x
+..x
+
+Output
+yes
+```
 
 ## Tech Stack
 
@@ -18,31 +36,19 @@ A PHP validator that checks whether Tic Tac Toe board states can appear in a val
 - Composer
 - PHPUnit
 
-## Project Structure
-
-- `app/validator.php` - board validation logic and CLI runner
-- `tests/validatorTest.php` - test coverage for board states
-
-## Getting Started
-
-Install dependencies and run tests:
+## Run
 
 ```bash
 composer install
 vendor/bin/phpunit
-```
-
-Run the validator directly:
-
-```bash
 php app/validator.php
 ```
 
-## Portfolio Notes
+## Project Structure
 
-- Demonstrates rule validation and edge-case handling.
-- Includes automated tests for a small domain model.
+- `app/validator.php` - board validation logic and CLI runner
+- `tests/validatorTest.php` - validation tests
 
-## Status
+## License
 
-Portfolio-ready coding challenge solution.
+MIT License. See [LICENSE](./LICENSE).
